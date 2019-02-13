@@ -90,3 +90,19 @@ def add_quote(quote_list, quotes):
                 return False
         else:
             print(f"{quote} is already in database")
+            
+
+def search_quote(stock):
+    stock = stock.lower()
+    search = requests.get(API_SEARCH.format(stock.split(" ")[0])).json()
+
+    matches = []
+    if len(search["bestMatches"])==0:
+        return None
+    else:
+        for stock_data in search["bestMatches"]:
+            name = stock_data["2. name"].lower()
+            if stock in name:
+                matches.append(stock_data) 
+        matches.append(search["bestMatches"][0])
+    return matches
