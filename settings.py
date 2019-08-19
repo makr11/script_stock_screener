@@ -13,7 +13,8 @@ FUNCTION = {
     "weekly_adjusted": "TIME_SERIES_WEEKLY_ADJUSTED",
     "monthly": "TIME_SERIES_MONTHLY",
     "monthly_adjusted": "TIME_SERIES_MONTHLY_ADJUSTED",
-    "quote": "GLOBAL_QUOTE"
+    "quote": "GLOBAL_QUOTE",
+    "search": "SYMBOL_SEARCH"
 }
 
 # database defaults
